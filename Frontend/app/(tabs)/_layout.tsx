@@ -27,10 +27,10 @@ export default function TabLayout() {
         headerShown: useClientOnlyValue(false, true),
       }}>
       <Tabs.Screen
-        name="index"
+        name="Home"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Home',
+          tabBarIcon: ({ color }) => <FontAwesome name="circle" color={color} size={24} />,
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>
@@ -48,10 +48,26 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="Workout"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Workout',
+          tabBarIcon: ({ color }) => <FontAwesome name="heart" color={color} size={24}/>,
+        }}
+      />
+
+      <Tabs.Screen
+        name="Nutrition"
+        options={{
+          title: 'Nutrition',
+          tabBarIcon: ({ color }) => <FontAwesome name="apple" color={color} size={24}/>,
+        }}
+      />
+
+      <Tabs.Screen
+        name="Profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color }) => <FontAwesome name="user" color={color} size={24} />,
         }}
       />
     </Tabs>
